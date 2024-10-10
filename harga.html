@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harga Tiket | Dewi Sri Waterpark</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<header class="bg-primary text-white text-center py-4">
+    <h1>Dewi Sri Waterpark</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="fasilitas.html">Fasilitas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="harga.html">Harga Tiket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container my-5">
+    <h2 class="text-center">Harga Tiket</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Dewasa: Rp 50.000</li>
+        <li class="list-group-item">Anak-anak: Rp 30.000</li>
+    </ul>
+
+    
+    <h3 class="text-center mt-5">Lokasi Dewi Sri Waterpark</h3>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d394802.02682863283!2d119.43521509802422!3d-5.217884035804223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee103b75a3e89%3A0xb7d5879d37ca2a9c!2sDewi%20Sri%20Waterpark!5e0!3m2!1sid!2sid!4v1695954040722!5m2!1sid!2sid"
+            allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    
+    <div class="text-center mt-4">
+        <button id="aboutButton" class="btn btn-primary">About us</button>
+    </div>
+</main>
+
+<footer class="text-center bg-dark text-white py-3">
+    &copy; 2024 Dewi Sri Waterpark
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    
+    document.getElementById('aboutButton').addEventListener('click', function() {
+        window.location.href = 'about.html';
+    });
+</script>
+
+</body>
+</html>
