@@ -1,17 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Dewi Sri Waterpark</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #FFDD93, #FF6F61); 
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        nav.navbar .nav-link {
+            font-weight: 600;
+            color: #FFD700;
+            transition: color 0.3s;
+        }
+        nav.navbar .nav-link:hover {
+            color: #FF4500;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #FFD700;
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            display: none;
+            z-index: 9999;
+            animation: fadeIn 1s ease forwards;
+        }
+        .popup h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #FF6F61;
+        }
+        .popup p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .popup button {
+            background-color: #FF6F61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .popup button:hover {
+            background-color: #FF4500;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translate(-50%, -60%); }
+            100% { opacity: 1; transform: translate(-50%, -50%); }
+        }
+        .fade-out {
+            animation: fadeOut 0.5s ease forwards;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; transform: translate(-50%, -60%); }
+        }
+        
+        /* Animasi slide masuk untuk tombol */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-slide-in {
+            animation: slideIn 1s ease-out forwards;
+        }
+    </style>
 </head>
 <body>
-<header class="bg-primary text-white text-center py-4">
-    <h1>Dewi Sri Waterpark</h1>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<header class="text-white text-center py-5">
+    <h1>Selamat Datang di Dewi Sri Waterpark</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="fasilitas.html">Fasilitas</a></li>
@@ -23,34 +124,40 @@
         </div>
     </nav>
 </header>
-
-<main class="container my-5">
+<main class="container my-5 text-center">
+    <h2 class="mb-4"></h2>
+    <img src="pembuka.jpg" alt="Dewi Sri Waterpark" class="img-fluid rounded shadow-lg mb-4" style="max-height: 400px; width: auto;">
+    <p>Dewi Sri Waterpark adalah tempat yang sempurna untuk bersenang-senang dan menikmati waktu bersama keluarga dan teman. Nikmati berbagai fasilitas menarik dan menyegarkan!</p>
     
-    <div class="text-center mb-4">
-        <img src="pembuka.jpg" alt="Dewi Sri Waterpark" class="img-fluid rounded" style="max-height: 400px; width: auto;">
-    </div>
-    <h2 class="text-center">Selamat Datang di Dewi Sri Waterpark</h2>
-    <p class="text-center">Wahana Permandian Air Segar yang menyenangkan untuk seluruh keluarga!</p>
-    <div class="text-center">
-        <button id="next-page-btn" class="btn btn-primary">Fasilitas Kami</button>
-    </div>
+    <!-- Tambahkan tombol dengan animasi untuk halaman berikutnya -->
+    <button id="nextPageButton" onclick="window.location.href='fasilitas.html';" class="btn btn-warning mt-4">Lihat Fasilitas Kami</button>
 </main>
-
-<footer class="text-center bg-dark text-white py-3">
-    &copy; 2024 Dewi Sri Waterpark
+<footer class="text-center py-4">
+    &copy; 2024 Dewi Sri Waterpark | <a href="#top" class="text-light">Kembali ke atas</a>
 </footer>
-
+<div class="popup" id="welcomePopup">
+    <h2>Selamat Datang di Dewi Sri Waterpark!</h2>
+    <p>Tempat sempurna untuk liburan keluarga Anda.</p>
+    <button id="closePopup">Close</button>
+</div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 <script>
-    var nextPageButton = document.getElementById('next-page-btn');
-    
-    nextPageButton.addEventListener('click', function() {
-        window.location.href = 'fasilitas.html';
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('welcomePopup').style.display = 'block';
+            // Memicu animasi tombol
+            document.getElementById('nextPageButton').classList.add('animate-slide-in');
+        }, 500); 
+    };
+    document.getElementById('closePopup').addEventListener('click', function() {
+        var popup = document.getElementById('welcomePopup');
+        popup.classList.add('fade-out');
+        setTimeout(function() {
+            popup.style.display = 'none';
+        }, 500);
     });
 </script>
-
 </body>
 </html>
