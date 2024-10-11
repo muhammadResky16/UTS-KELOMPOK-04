@@ -5,12 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fasilitas | Dewi Sri Waterpark</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #FFDD93, #FF6F61); 
+            color: #333;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        nav.navbar .nav-link {
+            font-weight: 600;
+            color: #FFD700;
+            transition: color 0.3s;
+        }
+        nav.navbar .nav-link:hover {
+            color: #FF4500;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #FFD700;
+        }
+        .facility-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .facility-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .facility-card h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: #FF6F61;
+        }
+        .facility-card p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
 
-<header class="bg-primary text-white text-center py-4">
+<header class="text-white text-center py-4">
     <h1>Dewi Sri Waterpark</h1>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">Home</a>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,15 +81,54 @@
 </header>
 
 <main class="container my-5">
-    <h2 class="text-center">Fasilitas Kami</h2>
-    <ul class="list-group">
-        <li class="list-group-item">Kolam Renang Anak</li>
-        <li class="list-group-item">Gazebo</li>
-        <li class="list-group-item">Seluncuran Air</li>
-    </ul>
-
-    
-    <button id="goToPage" class="btn btn-primary mt-3">Lihat Galeri</button>
+    <h2 class="text-center mb-4">Fasilitas</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="facility-card">
+                <img src="KOLAM.jpg" alt="Kolam Renang">
+                <div class="p-3">
+                    <h5>Kolam Renang</h5>
+                    <p>Kolam yang luas dan menyegarkan untuk seluruh keluarga.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="facility-card">
+                <img src="seluncuran2.jpg">
+                <div class="p-3">
+                    <h5>Seluncuran Air</h5>
+                    <p>Keseruan meluncur di seluncuran air yang menegangkan.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="facility-card">
+                <img src="kolam dewasa.jpg">
+                <div class="p-3">
+                    <h5>Kolam Dewasa</h5>
+                    <p>Kolam dewasa dengan kedalaman max 180cm</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="facility-card">
+                <img src="kolam anakk.jpg">
+                <div class="p-3">
+                    <h5>Kolam anak</h5>
+                    <p>Kolam anak lengkap dengan Mandi busa</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="facility-card">
+                <img src="RUMAH-RUMAH.jpg">
+                <div class="p-3">
+                    <h5>Gasebo</h5>
+                    <p>Tempat istrahat yang nyaman</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <footer class="text-center bg-dark text-white py-3">
@@ -44,15 +138,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-<script>
-    
-    document.getElementById('goToPage').addEventListener('click', function() {
-        
-        window.location.href = 'galeri.html';
-    });
-</script>
 
 </body>
 </html>
