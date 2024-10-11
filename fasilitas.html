@@ -39,25 +39,66 @@
         footer a {
             color: #FFD700;
         }
+
+        /* Styling kartu fasilitas */
         .facility-card {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             overflow: hidden;
             margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Tambahkan transisi background */
         }
+
         .facility-card img {
             width: 100%;
             height: 250px;
             object-fit: cover;
         }
+
         .facility-card h5 {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             color: #FF6F61;
+            transition: color 0.3s ease; /* Transisi warna */
         }
+
         .facility-card p {
             font-size: 1.1rem;
             color: #333;
+            transition: color 0.3s ease; /* Transisi warna */
+        }
+
+        /* Efek popup dan perubahan warna saat hover */
+        .facility-card:hover {
+            transform: scale(1.1); /* Memperbesar sedikit kartu fasilitas */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Menambah bayangan */
+            z-index: 100; /* Membawa elemen di depan */
+            background-color: #FF6F61; /* Mengubah warna background saat di-hover */
+        }
+
+        /* Ubah warna teks saat di-hover */
+        .facility-card:hover h5 {
+            color: #FFD700; /* Ubah warna judul */
+        }
+
+        .facility-card:hover p {
+            color: #fff; /* Ubah warna paragraf */
+        }
+
+        /* Styling untuk tombol menuju Galeri */
+        .btn-gallery {
+            background-color: #FF6F61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-gallery:hover {
+            background-color: #FF4500;
         }
     </style>
 </head>
@@ -94,7 +135,7 @@
         </div>
         <div class="col-md-4">
             <div class="facility-card">
-                <img src="seluncuran2.jpg">
+                <img src="seluncuran2.jpg" alt="Seluncuran Air">
                 <div class="p-3">
                     <h5>Seluncuran Air</h5>
                     <p>Keseruan meluncur di seluncuran air yang menegangkan.</p>
@@ -103,32 +144,33 @@
         </div>
         <div class="col-md-4">
             <div class="facility-card">
-                <img src="kolam dewasa.jpg">
+                <img src="kolam dewasa.jpg" alt="Kolam Dewasa">
                 <div class="p-3">
                     <h5>Kolam Dewasa</h5>
-                    <p>Kolam dewasa dengan kedalaman max 180cm</p>
+                    <p>Kolam dewasa dengan kedalaman max 180cm.</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="facility-card">
-                <img src="kolam anakk.jpg">
+                <img src="kolam anakk.jpg" alt="Kolam Anak">
                 <div class="p-3">
-                    <h5>Kolam anak</h5>
-                    <p>Kolam anak lengkap dengan Mandi busa</p>
+                    <h5>Kolam Anak</h5>
+                    <p>Kolam anak lengkap dengan mandi busa.</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="facility-card">
-                <img src="RUMAH-RUMAH.jpg">
+                <img src="RUMAH-RUMAH.jpg" alt="Gasebo">
                 <div class="p-3">
                     <h5>Gasebo</h5>
-                    <p>Tempat istrahat yang nyaman</p>
+                    <p>Tempat istirahat yang nyaman.</p>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="text-center mt-5">
         <button class="btn-gallery" id="galleryButton">Lihat Galeri Kami</button>
     </div>
@@ -141,6 +183,12 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    document.getElementById('galleryButton').addEventListener('click', function() {
+        window.location.href = 'galeri.html'; // Mengarahkan pengguna ke halaman galeri
+    });
+</script>
 
 </body>
 </html>
